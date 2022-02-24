@@ -1,0 +1,9 @@
+.Navbar {
+  text-align: center;
+  padding: 20px;
+}
+
+.Navbar__brand {
+  font-size: 2.5em;
+  font-weight: bold;
+}
