@@ -3,7 +3,6 @@
 }
 
 .MainContainer__file_input {
-  display: flex;
   justify-content: center;
   background-color: #f5f5f5;
   border-radius: 5px;
