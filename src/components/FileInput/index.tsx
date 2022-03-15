@@ -1,5 +1,5 @@
-import React, { CSSProperties, useState } from "react";
-
+import React, { CSSProperties, useState, useContext } from "react";
+import { GlobalStateContext } from "../../GlobalState";
 import {
   useCSVReader,
   lightenDarkenColor,
@@ -80,6 +80,7 @@ const styles = {
 };
 
 const FileInput = () => {
+  const { setCsvData } = useContext(GlobalStateContext);
   const { CSVReader } = useCSVReader();
   const [zoneHover, setZoneHover] = useState(false);
   const [removeHoverColor, setRemoveHoverColor] = useState(
@@ -91,6 +92,7 @@ const FileInput = () => {
       onUploadAccepted={(results: any) => {
         console.log("---------------------------");
         console.log(results);
+        setCsvData(results.data);
         console.log("---------------------------");
         setZoneHover(false);
       }}
